@@ -27,7 +27,7 @@ wheels/
 .installed.cfg
 *.egg
 
-# Python environment variables
+# env
 .env
 .env.local
 .env.development.local
@@ -55,10 +55,21 @@ Thumbs.db
 logs/
 
 # Node.js (for the frontend)
+.DS_Store
 FE/node_modules/
 FE/.next/
 FE/out/
 FE/build/
+FE/.next/cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # Temporary files
 *.tmp
