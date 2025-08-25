@@ -1,0 +1,15 @@
+[Unit]
+Description=Varis Office Frontend Service
+After=network.target
+
+[Service]
+Type=simple
+User=varis
+WorkingDirectory=/home/varis/varis-office/FE
+Environment=PATH=/usr/bin:/usr/local/bin:/bin
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Varis Office GPIO Control Service
+After=network.target
+
+[Service]
+Type=simple
+User=varis
+WorkingDirectory=/home/varis/varis-office/gpio
+Environment=PATH=/home/varis/varis-office/gpio/venv/bin
+ExecStart=/home/varis/varis-office/gpio/venv/bin/python start_server.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

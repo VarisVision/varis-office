@@ -74,3 +74,40 @@ next-env.d.ts
 # Temporary files
 *.tmp
 *.temp
+
+# Cloudflare tunnel and binary files
+cloudflared.deb
+varis-office-tunnel.service
+
+# Cloudflare configuration (contains sensitive tokens)
+.cloudflared/
+*.pem
+*.key
+*.crt
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Runtime files
+*.pid
+*.sock
+
+# Coverage reports
+coverage/
+*.lcov
+.coverage
+
+# Test results
+test-results/
+junit.xml
+
+# Local configuration overrides
+config.local.*
+settings.local.*
