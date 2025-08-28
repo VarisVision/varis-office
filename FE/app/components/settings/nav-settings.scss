@@ -1,0 +1,14 @@
+.varis-menu {
+    @apply absolute w-12 h-12 flex justify-center items-center;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    z-index: 100;
+
+    top: 4%;
+    right: 5%;
+}

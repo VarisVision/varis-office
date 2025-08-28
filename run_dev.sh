@@ -17,14 +17,7 @@ FE_PID=$!
 cd ..
 
 echo "Starting Cloudflare tunnel..."
-if [ -z "$CLOUDFLARE_TUNNEL_ID" ]; then
-    echo "Warning: CLOUDFLARE_TUNNEL_ID environment variable not set"
-    echo "Tunnel will not be started"
-    TUNNEL_PID=""
-else
-    cloudflared tunnel run "$CLOUDFLARE_TUNNEL_ID" &
-    TUNNEL_PID=$!
-fi
+cloudflared tunnel run "$CLOUDFLARE_TUNNEL_ID" 
 
 echo "All services are starting..."
 echo "Frontend will be available at: http://localhost:3000"
