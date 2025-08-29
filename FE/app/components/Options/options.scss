@@ -1,0 +1,33 @@
+.varis-office__options {
+    .options-icon {
+        @apply absolute w-12 h-12 flex justify-center items-center z-[100];
+        @apply top-[4%] right-[5%] rounded-full;
+        background: rgba(255, 255, 255, 0.09);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.1px);
+        -webkit-backdrop-filter: blur(6.1px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        &.power-controls {
+            &:hover {
+                background: rgba(244, 195, 94, 0.2);
+                border-color: rgba(244, 195, 94, 0.4);
+            }
+        }
+    }
+
+    .varis-office__power-controls {
+        @apply hidden;
+        
+        &.show {
+            @apply block;
+        }
+    }
+}

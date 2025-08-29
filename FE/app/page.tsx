@@ -1,7 +1,6 @@
 "use client"
 
-import Settings from "./components/settings/page";
-import PowerControls from "./components/PowerControls";
+import Options from "./components/Options";
 import ClickableAreas from "./components/ClickableAreas";
 import { usePowerManagement } from "./hooks/usePowerManagement";
 
@@ -16,7 +15,7 @@ export default function Home() {
   } = usePowerManagement();
 
   return (
-    <div className="varis-container">
+    <div className="varis-office__main-container">
       <ClickableAreas
         powerOn={powerOn}
         power27On={power27On}
@@ -25,7 +24,7 @@ export default function Home() {
         handlePowerToggle={handlePowerToggle}
       />
 
-      <PowerControls
+      <Options
         powerOn={powerOn}
         power27On={power27On}
         power21On={power21On}
@@ -33,7 +32,6 @@ export default function Home() {
         handlePowerToggle={handlePowerToggle}
         handleMasterToggle={handleMasterToggle}
       />
-      <Settings/>
     </div>
   );
 }
